@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link src="style.css" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <script>
+         
+        const add = document.getElementById("add");
+        
+
+        function addCard(){
+        // create a list element to stock 
+        var node = document.createElement("LI")
+        // create a div element 
+        var cards = document.createElement("div")
+        // add a class to the element
+        cards.classList.add("card");
+        // add a text inside the element
+        var card = document.createTextNode("bonjour")
+        
+        var p = document.createElement("p");
+        var ptext = document.createTextNode("ton nom aussi")
+        p.appendChild(ptext)
+        cards.appendChild(p)
+        
+        // add the content to the element
+        node.appendChild(cards)
+        cards.appendChild(card)
+        
+        document.getElementById("list").appendChild(node)
+        console.log("element created")
+        }
+    </script>
+    
+    <button id="add" onclick="addCard()"> add card </button> </br>
+
+    <div class="zone">
+        <ul id="list">
+          
+        </ul>  
+        
+      </div> 
+</body>
+</html>
